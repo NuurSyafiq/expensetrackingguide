@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracking Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Expense Tracking Guide</h1>
+      </header>
+    
+      <main>
+        <!--form to input expenses-->
+        <form id="expense-form">
+            <label for="expenseName">Expense Name</label>
+          <input type="text" id="expenseName" placeholder="Expense Name" required>
+          <label for="expenseAmt">Amount</label>
+          <input type="number" id="expenseAmt" placeholder="Amount" required>
+          <label for="expenseDate">Date</label>
+          <input type="date" id="expenseDate" required>
+          <label for="expenseCat">Category</label>
+          <select id="expenseCat" required>
+            <option value="" disabled selected>Select Category</option>
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Misc">Miscellaneous</option>
+          </select>
+
+          <label for="filterCategory">Filter by Category: ( Use only to filter )</label>
+<select id="filterCategory">
+  <option value="">All</option>
+  <option value="Food">Food</option>
+  <option value="Transport">Transport</option>
+  <option value="Entertainment">Entertainment</option>
+  <option value="Misc">Miscellaneous</option>
+</select>
+<button id="filterButton">Filter</button>
+
+          
+          <button type="submit">Add Expense</button>
+        </form>
+    
+        <!--All the expenses-->
+        <section id="expenseList">
+          <h2>All Expenses</h2>
+          <ul id="expenses"></ul>
+        </section>
+    
+        <!--summary-->
+        <section id="expense-summary">
+          <h2>Summary</h2>
+          <p>Total: $<span id="total-amount">0</span></p>
+        </section>
+
+
+        <h1>Currency Exchange Rates</h1>
+  <input type="text" id="currency-search" placeholder="Search currency">
+  <ul id="currency-rates"></ul>
+  
+
+
+
+
+ 
+
+
+      </main>
+
+
+   
+  
+      <script src="index.js"></script>
+
+</body>
+</html>

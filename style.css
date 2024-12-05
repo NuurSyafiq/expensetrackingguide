@@ -1,0 +1,135 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: #3FA5D9;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+main {
+  padding: 1em;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form {
+  display: grid;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+
+input, select, button {
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+button {
+  background: #4A758A;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2B3033;
+}
+
+#expenses {
+  list-style: none;
+  padding: 0;
+}
+
+#expenses li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em;
+  border-bottom: 1px solid #ccc;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0.5em;
+  }
+
+  #search-container {
+    display: flex; /* This will align the input and button horizontally */
+    gap: 10px; /* Optional: Adds space between input and button */
+  }
+  
+  #currency-search {
+    padding: 8px;
+    font-size: 16px;
+    width: 200px;
+  }
+  
+  #search-button {
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #search-button:hover {
+    background-color: #4CAF50; /* Change button color on hover */
+    color: white;
+  }
+
+  #currency-rates {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  #currency-rates li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #currency-rates li:hover {
+    background-color: #e0f7fa;
+  }
+  
+  .currency-flag {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  
+  .currency-code {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #00796b;
+  }
+  
+  .rate-value {
+    font-size: 1.2em;
+    color: #0288d1;
+  }
+  
+  /* Responsive design for small screens */
+  @media (max-width: 600px) {
+    #currency-rates li {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+    .currency-code {
+      margin-top: 5px;
+    }
+  }
+}
